@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-sans: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system,
+    'Segoe UI', sans-serif;
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* 品牌色：藏青 #0F3460，浅灰 #F4F6F8，白色背景 */
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #1a2433;
+  --card: #ffffff;
+  --card-foreground: #1a2433;
+  --popover: #ffffff;
+  --popover-foreground: #1a2433;
+  --primary: #0f3460;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f6f8;
+  --secondary-foreground: #0f3460;
+  --muted: #f4f6f8;
+  --muted-foreground: #5b6675;
+  --accent: #e8edf3;
+  --accent-foreground: #0f3460;
+  --destructive: #b42318;
+  --border: #e3e7ec;
+  --input: #e3e7ec;
+  --ring: #0f3460;
+  --radius: 0.375rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-padding-top: 4rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
